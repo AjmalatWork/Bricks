@@ -1,0 +1,28 @@
+Ball speed +			bsp
+Ball speed -			bsm
+Fire ball			fb
+Paddle length +			plp
+Paddle length -			plm	
+Ball Stick to paddle		bstp
+
+
+pdx = x - px;
+					if(pdx < pWidth/2)
+					{
+						
+						if(dx>0)
+							dx=-dx;
+					}
+					else if(pdx > pWidth/2)
+					{
+					
+						if(dx<0)
+							dx=-dx;
+					}
+					else
+					{
+						dx=0;
+					}
+					angle = 900/((pdx % pWidth/2) + 1);
+					m = Math.tan(angle);
+					dy = m*dx; 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help</title>
+	<style>
+		canvas{background: #eee; display: block; margin: 0 auto;}
+	</style>
+	<script>
+		window.onload = function() {document.getElementById("my_audio").play();}
+	</script>
+</head>
+<body>
+	<form>
+		<input type=button value="BACK TO MENU" onclick="location.href='Menu.html'">
+	</form>
+	<canvas id="game" height=620 width=1300></canvas>
+	<script>
+		var canvas = document.getElementById("game");
+		var ctx = canvas.getContext("2d");
+		
+		var brickWidth = 100;
+		var brickHeight = 20;
+		
+		ctx.beginPath();
+	
+		ctx.font = "72px Arial";
+		ctx.fillStyle = "blue";
+		ctx.textAlign='center';
+		ctx.fillText("HELP",canvas.width/2,150);
+		
+		ctx.font = "30px Arial";
+		ctx.fillStyle = "#212F3C";
+		ctx.fillText("Arrow Keys (Left and Right) : Move the Paddle",canvas.width/2,225);
+		
+		ctx.font = "20px Arial";
+		ctx.fillText("Paddle Size +",750,320);
+		ctx.fillText("Paddle Size -",750,370);
+		ctx.fillText("Ball Speed +",750,420);
+		ctx.fillText("Ball Speed -",750,470);
+		
+		ctx.rect(500,300,brickWidth,brickHeight);
+		ctx.fillStyle ="#1E8449";
+		ctx.fill();
+		ctx.closePath();
+		
+		ctx.beginPath();
+		ctx.rect(500,350,brickWidth,brickHeight);
+		ctx.fillStyle ="#C0392B";
+		ctx.fill();
+		ctx.closePath();
+		
+		ctx.beginPath();
+		ctx.rect(500,400,brickWidth,brickHeight);
+		ctx.fillStyle ="#F1C40F";
+		ctx.fill();
+		ctx.closePath();
+		
+		ctx.beginPath();
+		ctx.rect(500,450,brickWidth,brickHeight);
+		ctx.fillStyle ="#6C3483";
+		ctx.fill();
+		ctx.closePath();
+	</script>
+	<audio id="my_audio" src="mhelp.mp3" loop="loop"></audio>
+</body>
+</html>

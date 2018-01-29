@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Menu </title>
+	<style>
+		#heading
+		{
+			text-align : center;
+			font-size : 72px;
+			color : blue;
+		}
+	</style>
+	<script>
+		window.onload = function() {document.getElementById("my_audio").play();}
+	</script>
+</head>
+<body bgcolor=#eee>
+	<form>
+		<table cellpadding=20 align=center cellspacing=40>
+			<tr>
+				<td><p id="heading">BRICKS</p></td>
+			</tr>
+			<tr>
+				<hr/>
+			</tr>
+			<tr>
+				<td align=center><h3>
+					<input type=button value="START GAME" onclick="location.href='Game.html'"><br><br>
+					<input type=button value="HELP" onclick="location.href='Help.html'"><br><br>
+					<input type=button value="QUIT" onclick="window.close()"></input>
+				</h3></td>
+			</tr>
+		</table>
+	</form>
+	<audio id="my_audio" src="music.mp3" loop="loop"></audio>
+</body>
+</html>
